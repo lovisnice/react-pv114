@@ -8,6 +8,7 @@
     "@fontsource/roboto": "^5.0.8",
     "@mui/icons-material": "^5.14.16",
     "@mui/material": "^5.14.17",
+    "install": "^0.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.47.0",
@@ -16,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build":  "CI=false react-scripts build",
+    "build": "CI=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
