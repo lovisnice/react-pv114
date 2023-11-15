@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import AuthProvider from './contexts/AuthContext';
 // import CounterProvider from './contexts/counterContext';
 import CounterProvider from './contexts/counterContextWithReducer';
+import { CartProvider } from './contexts/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,12 +16,13 @@ root.render(
       {/* <BrowserRouter> */}
       <Router>
       {/* <ThemeProvider> */}
-      
+      <CartProvider>
       <CounterProvider>
         <AuthProvider>
           <App />
         </AuthProvider>
         </CounterProvider>
+      </CartProvider>
         {/* </ThemeProvider> */}
       </Router>
       {/* </BrowserRouter> */}

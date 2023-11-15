@@ -17,6 +17,7 @@ import ResponsiveAppBar from './components/ResponsiveAppBar';
 import Login from './components/users/Login';
 import { AuthContext } from './contexts/AuthContext';
 import Counter from './components/Counter';
+import Cart from './components/products/Cart';
 // import UsersList from './components/users/UsersList';
 
 
@@ -53,6 +54,7 @@ function App() {
               <Route path="/users" element={<UsersList />} />
               <Route path="/login" element={<Login />} />
               <Route path="/counter" element={<Counter />} />
+              <Route path="/cart" element={<Cart />} />
               {/* <Route path="/books" element={<h3>Book list</h3>}>
               <Route path=":id" element={<h3>Book 1</h3>}/>
               <Route path="history" element={<h3>Book History</h3>} />

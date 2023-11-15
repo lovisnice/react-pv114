@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthContext';
 import { CounterContext } from '../contexts/counterContext';
-
+import { CartContext } from '../contexts/CartContext';
 const pages = [
   {
     itemName: 'Home',
@@ -40,6 +40,10 @@ const pages = [
   {
     itemName: 'Counter',
     path: '/counter'
+  },
+  {
+    itemName:'Cart',
+    path:'/cart'
   }
 
 ];
@@ -48,7 +52,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 function ResponsiveAppBar() {
   const {userName}=React.useContext(AuthContext);
   const {count}=React.useContext(CounterContext);
-
+  const{cartItemCount}=React.useContext(CartContext);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const navigate = useNavigate();
@@ -167,7 +171,13 @@ function ResponsiveAppBar() {
               </Link>
             ))}
           </Box>
-          <h4>Counter: {count} </h4>
+          {/* <h4>Cart: {countcart}</h4> */}
+          <Box sx={{ flexGrow: 0 }}>
+          <Link key={"Cart"} to={"/cart"}>
+            <Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>{"Cart"}: {cartItemCount}</Button>
+          </Link>
+          </Box>
+          
           <h6>{userName}</h6>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
