@@ -11,30 +11,11 @@ const INITIAL_STATE = {
     title: "Counter #"
 }
 
-// const counterReducer=(state=INITIAL_STATE, action)=>{
-//     switch(action.type){
-//         case 'INCREMENT':
-//             return state+1;
-//         case 'DECREMENT':
-//             return state-1;
-//         case 'RESET':
-//             return 0
-//         default:
-//             return state;
-//     }
-// }
-// =====TYpes Actions====
 export const COUNTER_ACTION_TYPES={
     INCREMENT: 'INCREMENT',
     DECREMENT: 'DECREMENT',
     RESET: 'RESET'
 };
-/*
-const action ={
-    type: 'INCREMENT'
-}
-*/
-
 export const counterReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case COUNTER_ACTION_TYPES.INCREMENT:
